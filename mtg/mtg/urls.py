@@ -19,6 +19,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('data/',include('mtgdata.urls')),
+    path('api/',include('mtgdata.urls')),
+
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
