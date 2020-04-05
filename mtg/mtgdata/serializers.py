@@ -24,14 +24,16 @@ class DeckSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def create(self, validated_data):
-        print(True)
         cards = validated_data.pop('cards')
+
+        #validated_data.add(Player.objects.all().filter(username=validated_data.pop('username'))[0].id)
         deck = Deck.objects.create(**validated_data)
+
         for card in cards:
             Card.objects.create(deck=deck, **card)
         return deck
 
-class UserSerializer(serializers.ModelSerializer):
+class PlayerSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Player

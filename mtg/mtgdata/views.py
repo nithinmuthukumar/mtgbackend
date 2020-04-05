@@ -19,7 +19,7 @@ import json
 from rest_framework.authtoken.models import Token
 
 from .models import Player, Deck
-from .serializers import UserSerializer, DeckSerializer
+from .serializers import PlayerSerializer, DeckSerializer
 from . import serializers
 from . import models
 
@@ -27,25 +27,30 @@ from . import models
 class PlayerViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = Player.objects.all()
-    serializer_class = UserSerializer
+    serializer_class = PlayerSerializer
 
 
 class DeckViewSet(viewsets.ModelViewSet):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated,]
     queryset = Deck.objects.all()
     serializer_class = DeckSerializer
+
+    def create(self, request, *args, **kwargs):
+
+        return super().create(request, *args, **kwargs)
 
 
 @csrf_exempt
 @api_view(["POST"])
 @permission_classes((AllowAny,))
 def login(request):
-    username = request.data.get("username")
+    print(request.data)
+    email = request.data.get("email")
     password = request.data.get("password")
-    if username is None or password is None:
-        return Response({'error': 'Please provide both username and password'},
+    if email is None or password is None:
+        return Response({'error': 'Please provide both email and password'},
                         status=HTTP_400_BAD_REQUEST)
-    user = authenticate(username=username, password=password)
+    user = authenticate(email=email, password=password)
     if not user:
         return Response({'error': 'Invalid Credentials'},
                         status=HTTP_404_NOT_FOUND)
