@@ -35,9 +35,17 @@ class DeckViewSet(viewsets.ModelViewSet):
     queryset = Deck.objects.all()
     serializer_class = DeckSerializer
 
-    def create(self, request, *args, **kwargs):
+    @action(detail=False, methods=['post'],name="getplayerdecks")
+    def get_player_decks(self,request):
+        #can use request.user instead of finding owner with name
+        print(request.user)
+        owner = Player.objects.all().get(username=request.data.get("username"))
+        decks = self.queryset.filter(owner=owner)
+        return Response(self.serializer_class(decks,many=True).data)
 
-        return super().create(request, *args, **kwargs)
+
+
+
 
 
 @csrf_exempt
@@ -55,7 +63,7 @@ def login(request):
         return Response({'error': 'Invalid Credentials'},
                         status=HTTP_404_NOT_FOUND)
     token, _ = Token.objects.get_or_create(user=user)
-    return Response({'token': token.key},
+    return Response({'token': token.key,'user':PlayerSerializer(user).data},
                     status=HTTP_200_OK)
 
 
