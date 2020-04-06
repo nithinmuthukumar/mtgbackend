@@ -31,16 +31,12 @@ class PlayerViewSet(viewsets.ModelViewSet):
 
 
 class DeckViewSet(viewsets.ModelViewSet):
-    permission_classes = [IsAuthenticated,]
     queryset = Deck.objects.all()
     serializer_class = DeckSerializer
 
-    @action(detail=False, methods=['post'],name="getplayerdecks")
+    @action(detail=False, methods=['post'],name="publicdecks")
     def get_player_decks(self,request):
-        #can use request.user instead of finding owner with name
-        print(request.user)
-        owner = Player.objects.all().get(username=request.data.get("username"))
-        decks = self.queryset.filter(owner=owner)
+        decks = self.queryset.filter(public=True)
         return Response(self.serializer_class(decks,many=True).data)
 
 
@@ -63,7 +59,8 @@ def login(request):
         return Response({'error': 'Invalid Credentials'},
                         status=HTTP_404_NOT_FOUND)
     token, _ = Token.objects.get_or_create(user=user)
-    return Response({'token': token.key,'user':PlayerSerializer(user).data},
+    return Response({'token': token.key,
+                     'user':PlayerSerializer(user).data,'decks':DeckSerializer(Deck.objects.all().filter(owner=user),many=True).data},
                     status=HTTP_200_OK)
 
 

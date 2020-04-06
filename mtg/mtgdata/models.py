@@ -63,6 +63,7 @@ class Deck(models.Model):
     name = models.CharField(max_length=30)
 
     owner = models.ForeignKey(Player,on_delete=models.CASCADE)
+    public = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['name']
