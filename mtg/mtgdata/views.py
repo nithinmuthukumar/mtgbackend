@@ -33,15 +33,12 @@ class PlayerViewSet(viewsets.ModelViewSet):
 class DeckViewSet(viewsets.ModelViewSet):
     queryset = Deck.objects.all()
     serializer_class = DeckSerializer
+    lookup_field = 'id'
+    permission_classes = [IsAuthenticated]
 
-    @action(detail=False, methods=['post'],name="publicdecks")
-    def get_player_decks(self,request):
-        decks = self.queryset.filter(public=True)
-        return Response(self.serializer_class(decks,many=True).data)
-
-
-
-
+    def update(self, request, *args, **kwargs):
+        request.data['owner']=request.user.id
+        return super().update(request, *args, **kwargs)
 
 
 @csrf_exempt
@@ -49,6 +46,7 @@ class DeckViewSet(viewsets.ModelViewSet):
 @permission_classes((AllowAny,))
 def login(request):
     print(request.data)
+
     email = request.data.get("email")
     password = request.data.get("password")
     if email is None or password is None:
@@ -59,18 +57,12 @@ def login(request):
         return Response({'error': 'Invalid Credentials'},
                         status=HTTP_404_NOT_FOUND)
     token, _ = Token.objects.get_or_create(user=user)
+    print(PlayerSerializer(user).data)
     return Response({'token': token.key,
                      'user':PlayerSerializer(user).data,'decks':DeckSerializer(Deck.objects.all().filter(owner=user),many=True).data},
                     status=HTTP_200_OK)
 
 
-
-
-@csrf_exempt
-@api_view(["GET"])
-def sample_api(request):
-    data = {'sample_data': 123}
-    return Response(data, status=HTTP_200_OK)
 
 
 

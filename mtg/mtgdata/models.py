@@ -72,7 +72,6 @@ class Deck(models.Model):
 
 class Card(models.Model):
     name = models.CharField(max_length=200)
-    version = models.CharField(max_length=15)
     deck = models.ForeignKey(Deck, on_delete=models.CASCADE,related_name="cards",default=None)
 
 

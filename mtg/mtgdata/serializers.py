@@ -16,28 +16,36 @@ class CardSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+
 class DeckSerializer(serializers.ModelSerializer):
     cards = CardSerializer(many=True)
-
     class Meta:
         model = Deck
-        fields = '__all__'
+        fields = ('owner','name','cards','id')
 
     def create(self, validated_data):
         cards = validated_data.pop('cards')
 
-        #validated_data.add(Player.objects.all().filter(username=validated_data.pop('username'))[0].id)
         deck = Deck.objects.create(**validated_data)
 
         for card in cards:
-            Card.objects.create(deck=deck, **card)
+            Card.objects.create(**card)
         return deck
+
+    def update(self, instance, validated_data):
+
+        print(validated_data)
+        #Card.objects.all().filter(deck=instance).delete()
+        for card in validated_data.pop('cards'):
+            Card.objects.create(**card)
+        instance.save()
+        return instance
 
 class PlayerSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Player
-        fields = ('username', 'email', 'password')
+        fields = ('username', 'email', 'password','id')
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
