@@ -7,7 +7,7 @@ from django.db import models
 from django.core.mail import send_mail
 import string
 
-from .models import Player, Deck, Card
+from .models import Player, Deck, Card, Game
 
 
 class CardSerializer(serializers.ModelSerializer):
@@ -57,3 +57,12 @@ class PlayerSerializer(serializers.ModelSerializer):
         user.save()
 
         return user
+class GameSerializer(serializers.ModelSerializer):
+
+    players = PlayerSerializer(many=True)
+
+    class Meta:
+        model = Game
+        fields = '__all__'
+
+

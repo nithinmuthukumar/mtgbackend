@@ -32,7 +32,10 @@ class PlayerManager(BaseUserManager):
         user.set_password(password)
         user.save(using=self._db)
         return user
-
+class Game(models.Model):
+    name = models.CharField(max_length=30)
+    size = models.IntegerField()
+    format = models.CharField(max_length=40,choices=[(1,"Standard"),(2,"Modern"),(3,"EDH")])
 
 class Player(AbstractBaseUser):
     objects=PlayerManager()
@@ -49,6 +52,7 @@ class Player(AbstractBaseUser):
     is_superuser = models.BooleanField(default=False)
     wins = models.IntegerField(default=0)
     loss = models.IntegerField(default=0)
+    game = models.ForeignKey(Game,on_delete=models.CASCADE,blank=True,null=True,related_name='players')
     USERNAME_FIELD= 'email'
     REQUIRED_FIELDS = ['username']
 

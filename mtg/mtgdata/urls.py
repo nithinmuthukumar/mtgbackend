@@ -10,6 +10,7 @@ router = routers.DefaultRouter()
 
 router.register('players',views.PlayerViewSet,basename='player')
 router.register('decks', views.DeckViewSet,basename="deck")
+router.register('games',views.GameViewSet,basename='game')
 
 
 

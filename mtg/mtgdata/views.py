@@ -18,8 +18,8 @@ from django.conf import settings
 import json
 from rest_framework.authtoken.models import Token
 
-from .models import Player, Deck
-from .serializers import PlayerSerializer, DeckSerializer
+from .models import Player, Deck, Game
+from .serializers import PlayerSerializer, DeckSerializer, GameSerializer
 from . import serializers
 from . import models
 
@@ -28,6 +28,11 @@ class PlayerViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = Player.objects.all()
     serializer_class = PlayerSerializer
+class GameViewSet(viewsets.ModelViewSet):
+    permission_classes = [IsAuthenticated]
+    queryset = Game.objects.all()
+    serializer_class = GameSerializer
+
 
 
 class DeckViewSet(viewsets.ModelViewSet):
@@ -35,6 +40,10 @@ class DeckViewSet(viewsets.ModelViewSet):
     serializer_class = DeckSerializer
     lookup_field = 'id'
     permission_classes = [IsAuthenticated]
+
+    def create(self, request, *args, **kwargs):
+        request.data['owner']=request.user.id
+        return super().create(request, *args, **kwargs)
 
     def update(self, request, *args, **kwargs):
         request.data['owner']=request.user.id
