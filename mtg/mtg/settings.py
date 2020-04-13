@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,7 +41,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mtgdata.apps.MTGConfig',
     'rest_framework.authtoken',
+
 ]
+ASGI_APPLICATION = 'mtgdata.routing.application'
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
@@ -48,7 +59,7 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated', )
 }
-
+ASGI_APPLICATION = "mtgdata.routing.application"
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
