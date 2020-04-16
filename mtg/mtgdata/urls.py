@@ -3,7 +3,7 @@ from rest_framework import routers
 from rest_framework.authtoken import views as authviews
 from django.contrib.auth.views import auth_login
 
-from .views import login
+from .views import login, index
 from . import views
 
 router = routers.DefaultRouter()
@@ -16,8 +16,10 @@ router.register('games',views.GameViewSet,basename='game'),
 
 
 urlpatterns = [
-    path('', include(router.urls)),
+    #path('', include(router.urls)),
     path('login/',login,name='login'),
+    path('',index,name='index'),
+    path('<str:room_name>/', views.room, name='room'),
     ]
 #path('api-token-auth/',authviews.obtain_auth_token,name='api-token-auth'),
     #path('login/',auth_login,name='login'),
