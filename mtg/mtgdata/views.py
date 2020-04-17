@@ -33,12 +33,6 @@ class PlayerViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = Player.objects.all()
     serializer_class = PlayerSerializer
-class GameViewSet(viewsets.ModelViewSet):
-    permission_classes = [IsAuthenticated]
-    queryset = Game.objects.all()
-    serializer_class = GameSerializer
-
-
 
 class DeckViewSet(viewsets.ModelViewSet):
     queryset = Deck.objects.all()
@@ -49,6 +43,7 @@ class DeckViewSet(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         request.data['owner']=request.user.id
         return super().create(request, *args, **kwargs)
+
 
     def update(self, request, *args, **kwargs):
         request.data['owner']=request.user.id

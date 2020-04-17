@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ec95992-d672-4829-bb37-c98693666f28" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mtg/mtgdata/templates/chat/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mtg/mtgdata/templates/chat/room.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mtg/mtgdata/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mtg/mtgdata/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mtg/mtgdata/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/mtg/mtgdata/consumers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mtg/mtgdata/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mtg/mtgdata/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mtg/mtgdata/routing.py" beforeDir="false" afterPath="$PROJECT_DIR$/mtg/mtgdata/routing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mtg/mtgdata/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/mtg/mtgdata/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mtg/mtgdata/templates/chat/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mtg/mtgdata/templates/chat/room.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mtg/mtgdata/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mtg/mtgdata/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mtg/mtgdata/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mtg/mtgdata/views.py" afterDir="false" />
     </list>
@@ -36,22 +39,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mtg/mtgdata/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#44#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mtg/mtgdata/routing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+            <state relative-caret-position="266">
+              <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
               <folding>
                 <element signature="e#15#43#0" expanded="true" />
               </folding>
@@ -60,46 +51,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/channels/sessions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="181" selection-start-line="181" selection-end-line="181" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mtg/mtgdata/templates/chat/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mtg/mtgdata/templates/chat/room.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mtg/mtgdata/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="51" column="53" lean-forward="true" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
+            <state relative-caret-position="-12">
+              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mtg/mtgdata/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-142">
+              <caret line="43" column="45" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mtg/mtgdata/consumers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+            <state relative-caret-position="162">
+              <caret line="17" column="76" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
               <folding>
                 <element signature="e#20#31#0" expanded="true" />
               </folding>
@@ -108,10 +84,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mtg/mtgdata/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mtg/mtgdata/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+            <state relative-caret-position="90">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -119,20 +107,34 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mtg/mtg/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="53" column="1" lean-forward="true" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
+            <state relative-caret-position="795">
+              <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mtg/mtg/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mtg/mtgdata/apps.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mtg/mtgdata/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="420">
+              <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -166,20 +168,20 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/mtg/mtgdata/apps.py" />
-        <option value="$PROJECT_DIR$/mtg/mtgdata/admin.py" />
-        <option value="$PROJECT_DIR$/mtg/mtgdata/serializers.py" />
-        <option value="$PROJECT_DIR$/mtg/mtgdata/models.py" />
         <option value="$PROJECT_DIR$/mtg/mtg/routing.py" />
         <option value="$PROJECT_DIR$/mtg/mtg/asgi.py" />
         <option value="$PROJECT_DIR$/mtg/mtg/urls.py" />
         <option value="$PROJECT_DIR$/mtg/mtgdata/test.py" />
         <option value="$PROJECT_DIR$/mtg/mtgdata/templates/chat/index.html" />
-        <option value="$PROJECT_DIR$/mtg/mtgdata/views.py" />
-        <option value="$PROJECT_DIR$/mtg/mtgdata/urls.py" />
-        <option value="$PROJECT_DIR$/mtg/mtgdata/consumers.py" />
-        <option value="$PROJECT_DIR$/mtg/mtgdata/routing.py" />
         <option value="$PROJECT_DIR$/mtg/mtgdata/templates/chat/room.html" />
         <option value="$PROJECT_DIR$/mtg/mtg/settings.py" />
+        <option value="$PROJECT_DIR$/mtg/mtgdata/routing.py" />
+        <option value="$PROJECT_DIR$/mtg/mtgdata/urls.py" />
+        <option value="$PROJECT_DIR$/mtg/mtgdata/serializers.py" />
+        <option value="$PROJECT_DIR$/mtg/mtgdata/admin.py" />
+        <option value="$PROJECT_DIR$/mtg/mtgdata/models.py" />
+        <option value="$PROJECT_DIR$/mtg/mtgdata/views.py" />
+        <option value="$PROJECT_DIR$/mtg/mtgdata/consumers.py" />
       </list>
     </option>
   </component>
@@ -194,6 +196,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -225,26 +228,10 @@
               <item name="mtgdata" type="462c0819:PsiDirectoryNode" />
               <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="mtgbackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mtgbackend" type="462c0819:PsiDirectoryNode" />
-              <item name="mtg" type="462c0819:PsiDirectoryNode" />
-              <item name="mtgdata" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mtgbackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mtgbackend" type="462c0819:PsiDirectoryNode" />
-              <item name="mtg" type="462c0819:PsiDirectoryNode" />
-              <item name="mtgdata" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -344,7 +331,11 @@
       <workItem from="1586844968208" duration="584000" />
       <workItem from="1586884538099" duration="453000" />
       <workItem from="1586907937681" duration="615000" />
-      <workItem from="1586982230275" duration="4213000" />
+      <workItem from="1586982230275" duration="4428000" />
+      <workItem from="1587055696073" duration="331000" />
+      <workItem from="1587068376966" duration="402000" />
+      <workItem from="1587069997685" duration="2918000" />
+      <workItem from="1587088839412" duration="1279000" />
     </task>
     <task id="LOCAL-00001" summary="adding token authentication">
       <created>1586055763872</created>
@@ -402,17 +393,23 @@
       <option name="project" value="LOCAL" />
       <updated>1586807517524</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="tested socket connection">
+      <created>1587007051023</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587007051023</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53383000" />
+    <option name="totallyTimeSpent" value="58528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="821" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49931413" visible="true" weight="0.35121602" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49931413" visible="true" weight="0.37124464" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5006859" side_tool="true" weight="0.24964234" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -449,7 +446,8 @@
     <MESSAGE value="sends deck back on login" />
     <MESSAGE value="deck updates" />
     <MESSAGE value="adding game" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding game" />
+    <MESSAGE value="tested socket connection" />
+    <option name="LAST_COMMIT_MESSAGE" value="tested socket connection" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/mtgbackend$manage.coverage" NAME="manage Coverage Results" MODIFIED="1585783432335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mtg" />
@@ -459,7 +457,6 @@
     <entry file="file://$PROJECT_DIR$/mtg/mtgdata/__init__.py" />
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/django/db/models/base.py" />
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/rest_framework/viewsets.py" />
-    <entry file="file://$PROJECT_DIR$/mtg/mtgdata/apps.py" />
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/django/conf/urls/static.py" />
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/rest_framework/routers.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -475,20 +472,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mtg/mtgdata/admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/mtg/mtgdata/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/rest_framework/mixins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -517,6 +504,46 @@
     <entry file="file://$PROJECT_DIR$/mtg/mtgdata/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/mtg/mtgdata/templates/chat/index.html" />
+    <entry file="file://$PROJECT_DIR$/mtg/mtgdata/templates/chat/room.html" />
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/channels/sessions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2520">
+          <caret line="181" selection-start-line="181" selection-end-line="181" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/django/utils/archive.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="148" column="22" selection-start-line="148" selection-start-column="22" selection-end-line="148" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/rest_framework/mixins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mtg/mtgdata/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mtg/mtg/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mtg/mtg/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -524,88 +551,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mtg/mtgdata/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/mtg/mtgdata/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="420">
+          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mtg/mtgdata/models.py">
+    <entry file="file://$PROJECT_DIR$/mtg/mtgdata/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="51" column="53" lean-forward="true" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mtg/mtgdata/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+        <state relative-caret-position="90">
+          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
           <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mtg/mtgdata/templates/chat/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mtg/mtgdata/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mtg/mtgdata/consumers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <folding>
-            <element signature="e#20#31#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mtg/mtgdata/routing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+        <state relative-caret-position="266">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
           <folding>
             <element signature="e#15#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/channels/sessions.py">
+    <entry file="file://$PROJECT_DIR$/mtg/mtgdata/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="181" selection-start-line="181" selection-end-line="181" />
+        <state relative-caret-position="-12">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mtg/mtgdata/templates/chat/room.html">
+    <entry file="file://$PROJECT_DIR$/mtg/mtgdata/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+        <state relative-caret-position="-142">
+          <caret line="43" column="45" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mtg/mtg/settings.py">
+    <entry file="file://$PROJECT_DIR$/mtg/mtgdata/consumers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="53" column="1" lean-forward="true" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
+        <state relative-caret-position="162">
+          <caret line="17" column="76" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
+          <folding>
+            <element signature="e#20#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

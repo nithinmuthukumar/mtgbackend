@@ -10,16 +10,13 @@ router = routers.DefaultRouter()
 
 router.register('players',views.PlayerViewSet,basename='player')
 router.register('decks', views.DeckViewSet,basename="deck")
-router.register('games',views.GameViewSet,basename='game'),
 
 
 
 
 urlpatterns = [
-    #path('', include(router.urls)),
+    path('', include(router.urls)),
     path('login/',login,name='login'),
-    path('',index,name='index'),
-    path('<str:room_name>/', views.room, name='room'),
     ]
 #path('api-token-auth/',authviews.obtain_auth_token,name='api-token-auth'),
     #path('login/',auth_login,name='login'),

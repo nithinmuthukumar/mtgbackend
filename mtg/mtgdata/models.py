@@ -35,7 +35,7 @@ class PlayerManager(BaseUserManager):
 class Game(models.Model):
     name = models.CharField(max_length=30)
     size = models.IntegerField()
-    format = models.CharField(max_length=40,choices=[(1,"Standard"),(2,"Modern"),(3,"EDH")])
+    format = models.CharField(max_length=40,choices=[("1","Standard"),("2","Modern"),("3","EDH")])
 
 class Player(AbstractBaseUser):
     objects=PlayerManager()
