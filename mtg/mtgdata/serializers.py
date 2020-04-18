@@ -65,5 +65,11 @@ class GameSerializer(serializers.ModelSerializer):
         model = Game
         fields = '__all__'
 
+    #still need to save players to game
+    def create(self, validated_data):
+        game = Game.objects.create(**validated_data)
+        return game
+
+
 
 
