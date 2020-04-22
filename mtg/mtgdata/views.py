@@ -23,18 +23,14 @@ from .serializers import PlayerSerializer, DeckSerializer, GameSerializer
 from . import serializers
 from . import models
 
-def index(request):
-    return render(request, 'chat/index.html')
-def room(request, room_name):
-    return render(request, 'chat/room.html', {
-        'room_name': room_name
-    })
+
 class PlayerViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = Player.objects.all()
     serializer_class = PlayerSerializer
 
 class DeckViewSet(viewsets.ModelViewSet):
+
     queryset = Deck.objects.all()
     serializer_class = DeckSerializer
     lookup_field = 'id'

@@ -4,7 +4,7 @@ from asgiref.sync import async_to_sync
 from channels.generic.websocket import WebsocketConsumer
 
 from .models import Game, Player
-from .serializers import GameSerializer
+from .serializers import GameSerializer, PlayerSerializer
 
 from rest_framework.authtoken.models import Token
 class LobbyConsumer(WebsocketConsumer):
@@ -33,18 +33,22 @@ class LobbyConsumer(WebsocketConsumer):
         message = json.loads(text_data)
         data = message['data']
         if message['type']=='create':
+            print(data)
+            game = Game.objects.create(**data)
+            game.save()
 
-            game = GameSerializer(data=data)
+            # game = GameSerializer(data=data)
+            #
+            # game.is_valid(raise_exception=True)
+            #
+            #
+            # game.save()
 
+            self.scope['user'].game = game
+            self.scope['user'].save()
 
-            if game.is_valid():
-                game.save()
-                self.scope['user'].game = game.validated_data
-                self.scope['user'].save()
-                self.update()
-            else:
+            self.update()
 
-                print(game.errors)
 
     def update(self):
         self.send(text_data=json.dumps(GameSerializer(Game.objects.all(), many=True).data))

@@ -3,7 +3,7 @@ from rest_framework import routers
 from rest_framework.authtoken import views as authviews
 from django.contrib.auth.views import auth_login
 
-from .views import login, index
+from .views import login
 from . import views
 
 router = routers.DefaultRouter()

@@ -36,6 +36,8 @@ class Game(models.Model):
     name = models.CharField(max_length=30)
     size = models.IntegerField()
     format = models.CharField(max_length=40,choices=[("1","Standard"),("2","Modern"),("3","EDH")])
+    def __str__(self):
+        return str(self.name)
 
 class Player(AbstractBaseUser):
     objects=PlayerManager()
@@ -71,13 +73,16 @@ class Deck(models.Model):
 
     class Meta:
         ordering = ['name']
+    def __str__(self):
+        return str(self.name)
 
 
 
 class Card(models.Model):
     name = models.CharField(max_length=200)
     deck = models.ForeignKey(Deck, on_delete=models.CASCADE,related_name="cards",default=None)
-
+    def __str__(self):
+        return  str(self.name)
 
 
 

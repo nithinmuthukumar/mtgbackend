@@ -34,7 +34,6 @@ class DeckSerializer(serializers.ModelSerializer):
 
     def update(self, instance, validated_data):
 
-        print(validated_data)
         Card.objects.all().filter(deck=instance).delete()
         for card in validated_data.pop('cards'):
             Card.objects.create(**card)
@@ -57,18 +56,23 @@ class PlayerSerializer(serializers.ModelSerializer):
         user.save()
 
         return user
+
 class GameSerializer(serializers.ModelSerializer):
 
     players = PlayerSerializer(many=True)
 
     class Meta:
         model = Game
-        fields = '__all__'
+        fields = ('name','size','format','players')
 
-    #still need to save players to game
+    # still need to save players to game
+
     def create(self, validated_data):
+        validated_data.pop('players')
+
         game = Game.objects.create(**validated_data)
         return game
+
 
 
 
